@@ -1,0 +1,38 @@
+[
+  {
+    "unsafe_declaration": 30,
+    "declaration_missing": 30,
+    "post_declaration_failure": 55,
+    "followup_censored": 0,
+    "window": 3,
+    "declared": 390,
+    "intermittent_future": 25
+  },
+  {
+    "unsafe_declaration": 30,
+    "declaration_missing": 30,
+    "post_declaration_failure": 41,
+    "followup_censored": 0,
+    "window": 5,
+    "declared": 390,
+    "intermittent_future": 11
+  },
+  {
+    "unsafe_declaration": 30,
+    "declaration_missing": 30,
+    "post_declaration_failure": 31,
+    "followup_censored": 0,
+    "window": 8,
+    "declared": 390,
+    "intermittent_future": 1
+  },
+  {
+    "unsafe_declaration": 30,
+    "declaration_missing": 30,
+    "post_declaration_failure": 14,
+    "followup_censored": 0,
+    "window": 12,
+    "declared": 390,
+    "intermittent_future": 0
+  }
+]

@@ -1,0 +1,2 @@
+scenario,seed,unsafe_declaration_a,unsafe_declaration_b,unsafe_declaration_reduction,invalid_evidence_declaration_a,invalid_evidence_declaration_b,invalid_evidence_declaration_reduction,post_declaration_failure_a,post_declaration_failure_b,post_declaration_failure_reduction,extra_wait_ms
+intermittent,9,False,False,0.0,False,False,0.0,False,True,-1.0,102.1634560001985

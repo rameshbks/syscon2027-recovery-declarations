@@ -1,0 +1,548 @@
+[
+  {
+    "trace_id": 3961,
+    "scenario": "modification",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 123,
+    "actual_trailing_levels": [
+      60.83346692314945,
+      59.51914744098663,
+      58.22427325197178
+    ],
+    "captured_trailing_levels": [
+      60.91253155612799,
+      59.61493073963251,
+      58.30126025286179
+    ],
+    "received_trailing_levels": [
+      58.538272137490125,
+      55.6139272337449,
+      55.76253833679645
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 3960,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 3963,
+    "scenario": "modification",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 123,
+    "actual_trailing_levels": [
+      60.83346692314945,
+      59.51914744098663,
+      58.22427325197178
+    ],
+    "captured_trailing_levels": [
+      61.17746329664484,
+      59.87666932020055,
+      58.55873265112865
+    ],
+    "received_trailing_levels": [
+      58.803203878006975,
+      55.87566581431294,
+      56.020010735063316
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 3962,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 3997,
+    "scenario": "modification",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 107,
+    "actual_trailing_levels": [
+      60.16621640483677,
+      59.50079247326248,
+      58.831632587629876
+    ],
+    "captured_trailing_levels": [
+      60.19182919343322,
+      59.539349817316854,
+      58.8720416052762
+    ],
+    "received_trailing_levels": [
+      59.48127882276961,
+      57.62463558550056,
+      54.539399270128776
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 3996,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 3999,
+    "scenario": "modification",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 107,
+    "actual_trailing_levels": [
+      60.16621640483677,
+      59.50079247326248,
+      58.831632587629876
+    ],
+    "captured_trailing_levels": [
+      60.324210254250346,
+      59.67276145988942,
+      59.00604013662553
+    ],
+    "received_trailing_levels": [
+      59.613659883586735,
+      57.75804722807313,
+      54.6733978014781
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 3998,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4003,
+    "scenario": "modification",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 107,
+    "actual_trailing_levels": [
+      60.16621640483677,
+      59.50079247326248,
+      58.831632587629876
+    ],
+    "captured_trailing_levels": [
+      60.333239285491466,
+      59.69459720767345,
+      59.029678906445284
+    ],
+    "received_trailing_levels": [
+      59.622688914827854,
+      57.77988297585716,
+      54.69703657129786
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4002,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4087,
+    "scenario": "modification",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 113,
+    "actual_trailing_levels": [
+      60.01726757655143,
+      59.19416943567064,
+      58.37367313850677
+    ],
+    "captured_trailing_levels": [
+      60.06348752094601,
+      59.245842989251464,
+      58.424635051395356
+    ],
+    "received_trailing_levels": [
+      57.74689796997958,
+      57.58437871504587,
+      59.52427716958342
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4086,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4089,
+    "scenario": "modification",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 113,
+    "actual_trailing_levels": [
+      60.01726757655143,
+      59.19416943567064,
+      58.37367313850677
+    ],
+    "captured_trailing_levels": [
+      60.228163295514726,
+      59.4103724572701,
+      58.58845453450815
+    ],
+    "received_trailing_levels": [
+      57.91157374454829,
+      57.74890818306451,
+      59.68809665269622
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4088,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4195,
+    "scenario": "modification",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 127,
+    "actual_trailing_levels": [
+      61.77992316579621,
+      60.50876000645541,
+      59.25126257893567
+    ],
+    "captured_trailing_levels": [
+      61.8180279565545,
+      60.550725091646726,
+      59.31464763742249
+    ],
+    "received_trailing_levels": [
+      59.323978037984496,
+      58.45693261984231,
+      56.560385537946175
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4194,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4197,
+    "scenario": "modification",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 127,
+    "actual_trailing_levels": [
+      61.77992316579621,
+      60.50876000645541,
+      59.25126257893567
+    ],
+    "captured_trailing_levels": [
+      62.07352748207432,
+      60.80410333327928,
+      59.56500821713615
+    ],
+    "received_trailing_levels": [
+      59.57947756350431,
+      58.710310861474866,
+      56.81074611765984
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4196,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4200,
+    "scenario": "modification",
+    "window": 8,
+    "sigma": 0.0,
+    "declaration_step": 154,
+    "actual_trailing_levels": [
+      40.31890854742527,
+      40.13729294443016,
+      39.99214224173965
+    ],
+    "captured_trailing_levels": [
+      40.38035210298181,
+      40.1802145491766,
+      40.02601652116992
+    ],
+    "received_trailing_levels": [
+      40.38035210298181,
+      40.1802145491766,
+      40.02601652116992
+    ],
+    "mechanism": "fresh-but-lagged genuine measurement near lower-bound crossing"
+  },
+  {
+    "trace_id": 4201,
+    "scenario": "modification",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 127,
+    "actual_trailing_levels": [
+      61.77992316579621,
+      60.50876000645541,
+      59.25126257893567
+    ],
+    "captured_trailing_levels": [
+      62.07972477971565,
+      60.814453260676885,
+      59.59726715511613
+    ],
+    "received_trailing_levels": [
+      59.58567486114564,
+      58.72066078887247,
+      56.843005055639814
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4200,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4681,
+    "scenario": "replay",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 123,
+    "actual_trailing_levels": [
+      60.83346692314945,
+      59.51914744098663,
+      58.22427325197178
+    ],
+    "captured_trailing_levels": [
+      60.91253155612799,
+      59.61493073963251,
+      58.30126025286179
+    ],
+    "received_trailing_levels": [
+      58.538272137490125,
+      55.6139272337449,
+      55.76253833679645
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4680,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4683,
+    "scenario": "replay",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 123,
+    "actual_trailing_levels": [
+      60.83346692314945,
+      59.51914744098663,
+      58.22427325197178
+    ],
+    "captured_trailing_levels": [
+      61.17746329664484,
+      59.87666932020055,
+      58.55873265112865
+    ],
+    "received_trailing_levels": [
+      58.803203878006975,
+      55.87566581431294,
+      56.020010735063316
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4682,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4717,
+    "scenario": "replay",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 107,
+    "actual_trailing_levels": [
+      60.16621640483677,
+      59.50079247326248,
+      58.831632587629876
+    ],
+    "captured_trailing_levels": [
+      60.19182919343322,
+      59.539349817316854,
+      58.8720416052762
+    ],
+    "received_trailing_levels": [
+      59.48127882276961,
+      57.62463558550056,
+      54.539399270128776
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4716,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4719,
+    "scenario": "replay",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 107,
+    "actual_trailing_levels": [
+      60.16621640483677,
+      59.50079247326248,
+      58.831632587629876
+    ],
+    "captured_trailing_levels": [
+      60.324210254250346,
+      59.67276145988942,
+      59.00604013662553
+    ],
+    "received_trailing_levels": [
+      59.613659883586735,
+      57.75804722807313,
+      54.6733978014781
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4718,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4723,
+    "scenario": "replay",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 107,
+    "actual_trailing_levels": [
+      60.16621640483677,
+      59.50079247326248,
+      58.831632587629876
+    ],
+    "captured_trailing_levels": [
+      60.333239285491466,
+      59.69459720767345,
+      59.029678906445284
+    ],
+    "received_trailing_levels": [
+      59.622688914827854,
+      57.77988297585716,
+      54.69703657129786
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4722,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4807,
+    "scenario": "replay",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 113,
+    "actual_trailing_levels": [
+      60.01726757655143,
+      59.19416943567064,
+      58.37367313850677
+    ],
+    "captured_trailing_levels": [
+      60.06348752094601,
+      59.245842989251464,
+      58.424635051395356
+    ],
+    "received_trailing_levels": [
+      57.74689796997958,
+      57.58437871504587,
+      59.52427716958342
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4806,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4809,
+    "scenario": "replay",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 113,
+    "actual_trailing_levels": [
+      60.01726757655143,
+      59.19416943567064,
+      58.37367313850677
+    ],
+    "captured_trailing_levels": [
+      60.228163295514726,
+      59.4103724572701,
+      58.58845453450815
+    ],
+    "received_trailing_levels": [
+      57.91157374454829,
+      57.74890818306451,
+      59.68809665269622
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4808,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4915,
+    "scenario": "replay",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 127,
+    "actual_trailing_levels": [
+      61.77992316579621,
+      60.50876000645541,
+      59.25126257893567
+    ],
+    "captured_trailing_levels": [
+      61.8180279565545,
+      60.550725091646726,
+      59.31464763742249
+    ],
+    "received_trailing_levels": [
+      59.323978037984496,
+      58.45693261984231,
+      56.560385537946175
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4914,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4917,
+    "scenario": "replay",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 127,
+    "actual_trailing_levels": [
+      61.77992316579621,
+      60.50876000645541,
+      59.25126257893567
+    ],
+    "captured_trailing_levels": [
+      62.07352748207432,
+      60.80410333327928,
+      59.56500821713615
+    ],
+    "received_trailing_levels": [
+      59.57947756350431,
+      58.710310861474866,
+      56.81074611765984
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4916,
+    "clean_premature": false
+  },
+  {
+    "trace_id": 4920,
+    "scenario": "replay",
+    "window": 8,
+    "sigma": 0.0,
+    "declaration_step": 154,
+    "actual_trailing_levels": [
+      40.31890854742527,
+      40.13729294443016,
+      39.99214224173965
+    ],
+    "captured_trailing_levels": [
+      40.38035210298181,
+      40.1802145491766,
+      40.02601652116992
+    ],
+    "received_trailing_levels": [
+      40.38035210298181,
+      40.1802145491766,
+      40.02601652116992
+    ],
+    "mechanism": "fresh-but-lagged genuine measurement near lower-bound crossing"
+  },
+  {
+    "trace_id": 4921,
+    "scenario": "replay",
+    "window": 3,
+    "sigma": 2.0,
+    "declaration_step": 127,
+    "actual_trailing_levels": [
+      61.77992316579621,
+      60.50876000645541,
+      59.25126257893567
+    ],
+    "captured_trailing_levels": [
+      62.07972477971565,
+      60.814453260676885,
+      59.59726715511613
+    ],
+    "received_trailing_levels": [
+      59.58567486114564,
+      58.72066078887247,
+      56.843005055639814
+    ],
+    "mechanism": "noise permits in-range readings while actual level violates bound",
+    "clean_trace_id": 4920,
+    "clean_premature": false
+  }
+]

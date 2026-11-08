@@ -1,0 +1,113 @@
+{
+  "protocol": {
+    "purpose": "Separate nonlinear-process validation and fully crossed robustness; no additional evidence gate",
+    "status": "frozen before campaign outcomes",
+    "plant": "Two noninteracting gravity-drained tanks in cascade; pump feeds tank 1; PI on true tank-2 level",
+    "equations": "A1 dh1/dt=q-k1 sqrt(h1); A2 dh2/dt=k1 sqrt(h1)-k2 sqrt(h2)",
+    "parameters": {
+      "A1": 0.12,
+      "A2": 0.1,
+      "k1": 0.035,
+      "k2": 0.025,
+      "kp": 0.025,
+      "ki": 0.006,
+      "qmax": 0.04
+    },
+    "units": "h in metres; A in m2; q in m3/s; k in m^(5/2)/s; report level=100*h2",
+    "approved_target_m": 0.5,
+    "attacked_target_m": 0.8,
+    "level_bounds_m": [
+      0.4,
+      0.6
+    ],
+    "integration": "RK4 10 ms; PI update 20 ms; telemetry every 200 ms; 60 s virtual horizon",
+    "scenarios": [
+      "normal",
+      "outage",
+      "persistent_outage",
+      "intermittent",
+      "delayed_evidence",
+      "modification",
+      "replay",
+      "source_compromise"
+    ],
+    "seeds": [
+      20000,
+      20001,
+      20002,
+      20003,
+      20004,
+      20005,
+      20006,
+      20007,
+      20008,
+      20009,
+      20010,
+      20011,
+      20012,
+      20013,
+      20014,
+      20015,
+      20016,
+      20017,
+      20018,
+      20019
+    ],
+    "onset_s": "uniform 5..10, rounded to telemetry tick",
+    "duration_s": {
+      "short": "uniform 0.4..1.2, rounded to telemetry tick",
+      "long": "uniform 4..10, rounded to telemetry tick"
+    },
+    "transport_s": {
+      "low": "uniform .005...015",
+      "age_boundary": "uniform .045...065",
+      "deadline_boundary": "uniform .085...115"
+    },
+    "buffer_age_s": [
+      0,
+      0.04,
+      0.1
+    ],
+    "age_rule": "capture age=transport+buffer+0.12 if delayed_evidence fault active; signed capture timestamp retained",
+    "remote_sensor_sigma_level_units": [
+      0,
+      2
+    ],
+    "intermittent_failure_probability": 0.4,
+    "windows_samples": [
+      3,
+      5,
+      8,
+      12
+    ],
+    "authentication": [
+      false,
+      true
+    ],
+    "thresholds": {
+      "freshness_s": 0.06,
+      "service_deadline_s": 0.1
+    },
+    "outcomes": "Same trailing-three physical/service/target/write criterion and forward-five failure check as Stage 4; forward five now spans 1 virtual second",
+    "primary_comparison": "G3 versus G8+A; all 5760 predeclared traces; report missing/censored separately; no optimal-window selection",
+    "analysis": "20 seed blocks carrying all scenario-factor cells; 10000 percentile bootstrap replicates; analysis seed 20261107",
+    "independence": "New process, controller, generator and predicate/outcome implementation; audited HMAC verifier reused deliberately as fixed mechanism",
+    "limitations": [
+      "Research parameters are not fitted to Quanser or SWaT",
+      "Virtual transport and clocks; no new HTTP transactions",
+      "No physical sensors or independently validated safety oracle",
+      "No active restoration enforcement",
+      "Common random draws across factor cells; cells and methods are paired rather than independent"
+    ]
+  },
+  "frozen_utc": "2026-11-06T01:54:32.780569+00:00",
+  "source_sha256": {
+    "campaign.py": "c4e43ac41955ece38383d1887d60460034a43685dd13421776a012bb0200f53d",
+    "test_plant.py": "34f5eb79c96df733ab1021ece818fb82c149ef98862a93a5cc4b03846f3a63df",
+    "plant.py": "c4ccfa0fc64a1b4f6229206c593de7f23b039515aaa404bdeb08280a3e5d6382"
+  },
+  "fixed_evidence_sha256": "2ebb9e652b29105fbec5aa4079569757c2132cbb3665d4c0ffcd5b3cda478790",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39"
+}

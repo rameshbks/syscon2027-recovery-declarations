@@ -1,0 +1,10 @@
+transport,buffer_s,n,unsafe,missing,declared
+low,0.0,640,42,80,560
+low,0.04,640,42,80,560
+low,0.1,640,40,600,40
+age_boundary,0.0,640,26,80,560
+age_boundary,0.04,640,24,616,24
+age_boundary,0.1,640,24,616,24
+deadline_boundary,0.0,640,0,640,0
+deadline_boundary,0.04,640,0,640,0
+deadline_boundary,0.1,640,0,640,0

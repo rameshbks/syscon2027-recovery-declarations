@@ -1,0 +1,472 @@
+{
+  "summary": [
+    {
+      "unsafe_declaration": 118,
+      "invalid_evidence_declaration": 117,
+      "declaration_missing": 20,
+      "post_declaration_failure": 167,
+      "followup_censored": 0,
+      "strategy": "connectivity",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    },
+    {
+      "unsafe_declaration": 68,
+      "invalid_evidence_declaration": 79,
+      "declaration_missing": 20,
+      "post_declaration_failure": 131,
+      "followup_censored": 0,
+      "strategy": "policy",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    },
+    {
+      "unsafe_declaration": 60,
+      "invalid_evidence_declaration": 60,
+      "declaration_missing": 20,
+      "post_declaration_failure": 127,
+      "followup_censored": 0,
+      "strategy": "gate_v2",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    },
+    {
+      "unsafe_declaration": 16,
+      "invalid_evidence_declaration": 16,
+      "declaration_missing": 20,
+      "post_declaration_failure": 94,
+      "followup_censored": 0,
+      "strategy": "gate_v3",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    },
+    {
+      "unsafe_declaration": 20,
+      "invalid_evidence_declaration": 20,
+      "declaration_missing": 20,
+      "post_declaration_failure": 99,
+      "followup_censored": 0,
+      "strategy": "auth_only",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    },
+    {
+      "unsafe_declaration": 48,
+      "invalid_evidence_declaration": 48,
+      "declaration_missing": 20,
+      "post_declaration_failure": 100,
+      "followup_censored": 0,
+      "strategy": "stability_only",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "normal",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 15,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 15,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "permissive",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 7,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 4,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 7,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 4,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "outage",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 11,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 5,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 11,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 5,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "stale",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "partial_restore",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 3,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 3,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "monitor_loss",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 5,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 1,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 5,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 1,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "combined",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "persistent_outage",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 20,
+        "post_declaration_failure": 0,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 20,
+        "post_declaration_failure": 0,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 20,
+        "post_declaration_failure": 0,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 20,
+        "post_declaration_failure": 0,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "intermittent",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 17,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 7,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 17,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 7,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "misleading_evidence",
+      "gate_v2": {
+        "unsafe_declaration": 20,
+        "invalid_evidence_declaration": 20,
+        "declaration_missing": 0,
+        "post_declaration_failure": 20,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 13,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 16,
+        "invalid_evidence_declaration": 16,
+        "declaration_missing": 0,
+        "post_declaration_failure": 16,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "replay_evidence",
+      "gate_v2": {
+        "unsafe_declaration": 20,
+        "invalid_evidence_declaration": 20,
+        "declaration_missing": 0,
+        "post_declaration_failure": 20,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 13,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 16,
+        "invalid_evidence_declaration": 16,
+        "declaration_missing": 0,
+        "post_declaration_failure": 16,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "source_compromise",
+      "gate_v2": {
+        "unsafe_declaration": 20,
+        "invalid_evidence_declaration": 20,
+        "declaration_missing": 0,
+        "post_declaration_failure": 20,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 16,
+        "invalid_evidence_declaration": 16,
+        "declaration_missing": 0,
+        "post_declaration_failure": 16,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 20,
+        "invalid_evidence_declaration": 20,
+        "declaration_missing": 0,
+        "post_declaration_failure": 20,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 16,
+        "invalid_evidence_declaration": 16,
+        "declaration_missing": 0,
+        "post_declaration_failure": 16,
+        "followup_censored": 0
+      }
+    }
+  ],
+  "paired": {
+    "unsafe_declaration": {
+      "eligible": 220,
+      "improve": 44,
+      "worsen": 0,
+      "difference_pp": 20.0,
+      "conditional95": [
+        18.636363636363637,
+        21.818181818181817
+      ]
+    },
+    "post_declaration_failure": {
+      "eligible": 220,
+      "improve": 68,
+      "worsen": 35,
+      "difference_pp": 15.0,
+      "conditional95": [
+        6.363636363636363,
+        23.636363636363637
+      ]
+    }
+  },
+  "paired_wait_n": 220,
+  "paired_wait_median_ms": 291.45691600001555,
+  "samples": 19200,
+  "high_delay_samples": 2842,
+  "deadline_exceeded_samples": 1885,
+  "audit": "PASS: all trace coverage, source hashes, signed verdicts, 1440 outcome records, schedules and real request-delay checks"
+}

@@ -1,0 +1,23 @@
+{
+  "description": "Prepared from retained research artifacts; frozen scientific source bytes preserved. Packaging scripts added separately.",
+  "original_archive_sha256": "68c5d1b880c5c1e78693262e6cef03d8e2a7ef6d71d5d25cec6f982621d31b41",
+  "campaigns": [
+    {
+      "name": "original_http",
+      "traces": 420,
+      "assessments": 2520
+    },
+    {
+      "name": "heldout_http",
+      "traces": 240,
+      "assessments": 1440
+    },
+    {
+      "name": "nonlinear_two_tank",
+      "process_trajectories": 320,
+      "observation_traces": 5760,
+      "assessments": 46080
+    }
+  ],
+  "publication_status": "unpublished preparation; no DOI assigned"
+}

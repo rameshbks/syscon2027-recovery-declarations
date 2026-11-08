@@ -1,0 +1,6 @@
+metric,pairs,estimate,lower95,upper95,unit,improved,worsened,degenerate_interval
+unsafe_declaration,390,15.384615384615385,15.384615384615385,15.384615384615385,percentage points reduction among jointly observed outcomes,60.0,0.0,True
+invalid_evidence_declaration,390,15.384615384615385,15.384615384615385,15.384615384615385,percentage points reduction among jointly observed outcomes,60.0,0.0,True
+post_declaration_failure,390,21.53846153846154,20.256410256410255,22.564102564102566,percentage points reduction among jointly observed outcomes,85.0,1.0,False
+extra_wait_mean,390,157.26972675892029,152.48332760834768,162.06664111207897,ms,,,False
+extra_wait_median,390,101.17155250009094,101.03600526215361,101.4027894998435,ms,,,False

@@ -1,0 +1,305 @@
+{
+  "stage": "Stage 4 loopback HTTP trace-based HMAC experiment",
+  "status": "completed",
+  "scenarios": [
+    "normal",
+    "permissive",
+    "outage",
+    "stale",
+    "partial_restore",
+    "monitor_loss",
+    "combined",
+    "persistent_outage",
+    "intermittent",
+    "misleading_evidence",
+    "replay_evidence",
+    "stale_signed",
+    "missing_signed",
+    "source_compromise"
+  ],
+  "strategies": [
+    "connectivity",
+    "policy",
+    "gate_v2",
+    "gate_v3",
+    "auth_only",
+    "stability_only"
+  ],
+  "primary_strategies": [
+    "connectivity",
+    "policy",
+    "gate_v2",
+    "gate_v3"
+  ],
+  "seeds": 2,
+  "steps": 65,
+  "interval_target_s": 0.02,
+  "stability_window": 8,
+  "hashes": {
+    "stage4_campaign.py": "9b19277c3ae11aaba56c7be3c716801f29aa50f55239216ca7ac7e267b9ca18e",
+    "stage4_lab.py": "997f92ba03909a700a9f65f800bac4aea4ad0208d4fddde6b69b5f8117cb8144",
+    "network_lab_stage3.py": "e5156c69a25ae1a2f77831e7e2df391f6aa21dbbe76cd69b60320bd9a621134a",
+    "evidence.py": "2ebb9e652b29105fbec5aa4079569757c2132cbb3665d4c0ffcd5b3cda478790"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "completed_trials": 28,
+  "schedules": [
+    {
+      "scenario": "stale",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 23,
+      "policy_restore_step": 31,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "stale",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 21,
+      "policy_restore_step": 31,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "normal",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 20,
+      "policy_restore_step": 26,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "misleading_evidence",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 20,
+      "policy_restore_step": 27,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "stale_signed",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 23,
+      "policy_restore_step": 31,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "persistent_outage",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 24,
+      "policy_restore_step": 30,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "monitor_loss",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 20,
+      "policy_restore_step": 28,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "partial_restore",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 20,
+      "policy_restore_step": 30,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "missing_signed",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 20,
+      "policy_restore_step": 28,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "normal",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 20,
+      "policy_restore_step": 30,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "monitor_loss",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 24,
+      "policy_restore_step": 32,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "permissive",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 22,
+      "policy_restore_step": 32,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "intermittent",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 23,
+      "policy_restore_step": 29,
+      "intermittent_failure_steps": [
+        10,
+        11,
+        13,
+        15,
+        19,
+        21,
+        22,
+        24,
+        25,
+        27,
+        28
+      ]
+    },
+    {
+      "scenario": "combined",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 20,
+      "policy_restore_step": 27,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "intermittent",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 23,
+      "policy_restore_step": 29,
+      "intermittent_failure_steps": [
+        10,
+        11,
+        16,
+        17,
+        18,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "scenario": "persistent_outage",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 21,
+      "policy_restore_step": 31,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "replay_evidence",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 20,
+      "policy_restore_step": 27,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "partial_restore",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 23,
+      "policy_restore_step": 31,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "source_compromise",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 20,
+      "policy_restore_step": 27,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "outage",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 20,
+      "policy_restore_step": 26,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "stale_signed",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 21,
+      "policy_restore_step": 31,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "combined",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 20,
+      "policy_restore_step": 26,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "permissive",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 21,
+      "policy_restore_step": 29,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "misleading_evidence",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 22,
+      "policy_restore_step": 31,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "source_compromise",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 22,
+      "policy_restore_step": 31,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "replay_evidence",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 22,
+      "policy_restore_step": 31,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "missing_signed",
+      "seed": 1,
+      "injection_step": 10,
+      "restore_step": 24,
+      "policy_restore_step": 32,
+      "intermittent_failure_steps": []
+    },
+    {
+      "scenario": "outage",
+      "seed": 0,
+      "injection_step": 10,
+      "restore_step": 22,
+      "policy_restore_step": 30,
+      "intermittent_failure_steps": []
+    }
+  ],
+  "limitations": [
+    "All roles share a host and process; no hardware trust boundary",
+    "Evidence signed and verified retrospectively on recorded HTTP traces",
+    "HMAC keys in audit_keys.json are disposable laboratory keys, not production credentials",
+    "Gate decisions do not control restoration",
+    "Authentication does not establish truthful measurement by a compromised signer",
+    "Sample windows cannot guarantee future availability"
+  ],
+  "trials": 28,
+  "primary_evaluations": 112,
+  "ablation_evaluations": 56,
+  "total_strategy_evaluations": 168
+}

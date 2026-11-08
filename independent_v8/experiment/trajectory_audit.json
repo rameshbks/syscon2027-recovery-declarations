@@ -1,0 +1,8 @@
+{
+  "method": "independently coded forward Euler at 1 ms versus campaign RK4 at 10 ms",
+  "trajectories": 320,
+  "max_level_error": 0.004513662305832611,
+  "tolerance_level_units": 0.1,
+  "status": "PASS",
+  "scope": "supplemental numerical audit, not physical calibration"
+}
