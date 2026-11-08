@@ -2,7 +2,14 @@
 
 Source code and recorded evidence supporting **Evaluating Recovery Declarations in Interconnected IT/OT Systems Under Evidence Manipulation and Communication Failures**, by Ramesh Subramani, Abdul Khadir Mahamed, and Sai Pavan Kumar Mandapaka (New York University).
 
-Release candidate 1.0.0. This preparation is not a public deposit and has no DOI yet. See docs/PUBLICATION.md before publication. The manuscript is intentionally excluded.
+Version 1.0.2 corrects distribution integrity and publication metadata; experimental results are unchanged.
+
+- Public repository: https://github.com/rameshbks/syscon2027-recovery-declarations
+- Earlier archived release v1.0.1: https://doi.org/10.5281/zenodo.24061066
+- This corrected v1.0.2: its version-specific Zenodo DOI is pending archival. The earlier DOI does not identify these corrected files.
+- License: MIT License, in LICENSE.
+
+See docs/PUBLICATION.md for release history and the final archive check. The manuscript is intentionally excluded.
 
 ## What is measured
 
@@ -86,7 +93,9 @@ Later manuscript figure typography may differ from the retained analytical plots
 
 ## Citation and licensing
 
-CITATION.cff contains draft version metadata without an invented DOI or repository URL. A proposed MIT license is in LICENSE.proposed. It is a publication decision for the authors to approve; no public license grant or upload has been performed by this preparation. Dependencies keep their own licenses; they are not redistributed here.
+CITATION.cff identifies version 1.0.2, all three authors, the public repository and the MIT License. Cite the version-specific Zenodo DOI for the exact release used. The earlier v1.0.1 DOI is https://doi.org/10.5281/zenodo.24061066; do not use it to identify v1.0.2. The new version DOI will be assigned when Zenodo archives this corrected release. Dependencies retain their own licenses and are not redistributed here.
+
+Git preserves every tracked file byte-for-byte via .gitattributes, including the original CRLF CSV fixtures. Do not use a spreadsheet or text editor to resave raw evidence files. Check CHECKSUMS.json before verification. Historical campaign reports retain their preparation-era wording; this README and docs/PUBLICATION.md describe current availability.
 
 ## Keys and provenance
 

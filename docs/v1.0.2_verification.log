@@ -1,0 +1,688 @@
+RUN -m unittest discover -s stage4 -p test_*.py
+..................................
+----------------------------------------------------------------------
+Ran 34 tests in 1.315s
+
+OK
+RUN independent_v8/experiment/test_plant.py
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.132s
+
+OK
+RUN original_http/analysis/analyze_stage5.py --archive original_http/stage4_results_full_windows_v1.zip --out /tmp/syscon-reproduce-rlklh_fl/artifact/reproduced_original
+      strategy  evaluations  declared  unsafe  invalid_evidence  no_declaration  followup_eligible  followup_censored  future_failure  unsafe_percent_all_traces  unsafe_percent_declared  future_failure_percent_eligible  median_declaration_ms  mean_declaration_ms  safe_now_then_future_failure
+  connectivity          420       390     180               238              30                390                  0             205                  42.857143                46.153846                        52.564103              45.037904           111.189046                            25
+        policy          420       390      90               148              30                390                  0             115                  21.428571                23.076923                        29.487179             174.158970           191.923800                            25
+       gate_v2          420       390      90                90              30                390                  0             115                  21.428571                23.076923                        29.487179             264.921619           227.472565                            25
+       gate_v3          420       390      30                30              30                390                  0              31                   7.142857                 7.692308                         7.948718             387.504415           384.742292                             1
+     auth_only          420       390      30                30              30                390                  0              55                   7.142857                 7.692308                        14.102564             285.353646           265.086008                            25
+stability_only          420       390      90                90              30                390                  0              91                  21.428571                23.076923                        23.333333             368.277979           347.070159                             1
+                      metric  pairs   estimate    lower95    upper95                                                        unit  improved  worsened  degenerate_interval
+          unsafe_declaration    390  15.384615  15.384615  15.384615 percentage points reduction among jointly observed outcomes      60.0       0.0                 True
+invalid_evidence_declaration    390  15.384615  15.384615  15.384615 percentage points reduction among jointly observed outcomes      60.0       0.0                 True
+    post_declaration_failure    390  21.538462  20.256410  22.564103 percentage points reduction among jointly observed outcomes      85.0       1.0                False
+             extra_wait_mean    390 157.269727 152.483328 162.066641                                                          ms       NaN       NaN                False
+           extra_wait_median    390 101.171553 101.036005 101.402789                                                          ms       NaN       NaN                False
+RUN scripts/window_sensitivity.py --input /tmp/syscon-reproduce-rlklh_fl/artifact/reproduced_original/input/stage4_results_full_windows_v1 --out /tmp/syscon-reproduce-rlklh_fl/artifact/sensitivity_reproduced.json
+RUN validation/analyze_validation.py
+{
+  "summary": [
+    {
+      "unsafe_declaration": 118,
+      "invalid_evidence_declaration": 117,
+      "declaration_missing": 20,
+      "post_declaration_failure": 167,
+      "followup_censored": 0,
+      "strategy": "connectivity",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    },
+    {
+      "unsafe_declaration": 68,
+      "invalid_evidence_declaration": 79,
+      "declaration_missing": 20,
+      "post_declaration_failure": 131,
+      "followup_censored": 0,
+      "strategy": "policy",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    },
+    {
+      "unsafe_declaration": 60,
+      "invalid_evidence_declaration": 60,
+      "declaration_missing": 20,
+      "post_declaration_failure": 127,
+      "followup_censored": 0,
+      "strategy": "gate_v2",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    },
+    {
+      "unsafe_declaration": 16,
+      "invalid_evidence_declaration": 16,
+      "declaration_missing": 20,
+      "post_declaration_failure": 94,
+      "followup_censored": 0,
+      "strategy": "gate_v3",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    },
+    {
+      "unsafe_declaration": 20,
+      "invalid_evidence_declaration": 20,
+      "declaration_missing": 20,
+      "post_declaration_failure": 99,
+      "followup_censored": 0,
+      "strategy": "auth_only",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    },
+    {
+      "unsafe_declaration": 48,
+      "invalid_evidence_declaration": 48,
+      "declaration_missing": 20,
+      "post_declaration_failure": 100,
+      "followup_censored": 0,
+      "strategy": "stability_only",
+      "n": 240,
+      "declared": 220,
+      "future_eligible": 220
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "normal",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 15,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 15,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "permissive",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 7,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 4,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 7,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 4,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "outage",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 11,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 5,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 11,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 5,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "stale",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "partial_restore",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 3,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 3,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "monitor_loss",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 5,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 1,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 5,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 1,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "combined",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 8,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "persistent_outage",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 20,
+        "post_declaration_failure": 0,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 20,
+        "post_declaration_failure": 0,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 20,
+        "post_declaration_failure": 0,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 20,
+        "post_declaration_failure": 0,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "intermittent",
+      "gate_v2": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 17,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 7,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 17,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 7,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "misleading_evidence",
+      "gate_v2": {
+        "unsafe_declaration": 20,
+        "invalid_evidence_declaration": 20,
+        "declaration_missing": 0,
+        "post_declaration_failure": 20,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 13,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 16,
+        "invalid_evidence_declaration": 16,
+        "declaration_missing": 0,
+        "post_declaration_failure": 16,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "replay_evidence",
+      "gate_v2": {
+        "unsafe_declaration": 20,
+        "invalid_evidence_declaration": 20,
+        "declaration_missing": 0,
+        "post_declaration_failure": 20,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 13,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 0,
+        "invalid_evidence_declaration": 0,
+        "declaration_missing": 0,
+        "post_declaration_failure": 6,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 16,
+        "invalid_evidence_declaration": 16,
+        "declaration_missing": 0,
+        "post_declaration_failure": 16,
+        "followup_censored": 0
+      }
+    },
+    {
+      "scenario": "source_compromise",
+      "gate_v2": {
+        "unsafe_declaration": 20,
+        "invalid_evidence_declaration": 20,
+        "declaration_missing": 0,
+        "post_declaration_failure": 20,
+        "followup_censored": 0
+      },
+      "gate_v3": {
+        "unsafe_declaration": 16,
+        "invalid_evidence_declaration": 16,
+        "declaration_missing": 0,
+        "post_declaration_failure": 16,
+        "followup_censored": 0
+      },
+      "auth_only": {
+        "unsafe_declaration": 20,
+        "invalid_evidence_declaration": 20,
+        "declaration_missing": 0,
+        "post_declaration_failure": 20,
+        "followup_censored": 0
+      },
+      "stability_only": {
+        "unsafe_declaration": 16,
+        "invalid_evidence_declaration": 16,
+        "declaration_missing": 0,
+        "post_declaration_failure": 16,
+        "followup_censored": 0
+      }
+    }
+  ],
+  "paired": {
+    "unsafe_declaration": {
+      "eligible": 220,
+      "improve": 44,
+      "worsen": 0,
+      "difference_pp": 20.0,
+      "conditional95": [
+        18.636363636363637,
+        21.818181818181817
+      ]
+    },
+    "post_declaration_failure": {
+      "eligible": 220,
+      "improve": 68,
+      "worsen": 35,
+      "difference_pp": 15.0,
+      "conditional95": [
+        6.363636363636363,
+        23.636363636363637
+      ]
+    }
+  },
+  "paired_wait_n": 220,
+  "paired_wait_median_ms": 291.45691600001555,
+  "samples": 19200,
+  "high_delay_samples": 2842,
+  "deadline_exceeded_samples": 1885,
+  "audit": "PASS: all trace coverage, source hashes, signed verdicts, 1440 outcome records, schedules and real request-delay checks"
+}
+RUN independent_v8/experiment/audit_analyze.py
+audited 720/5760 traces
+audited 1440/5760 traces
+audited 2160/5760 traces
+audited 2880/5760 traces
+audited 3600/5760 traces
+audited 4320/5760 traces
+audited 5040/5760 traces
+audited 5760/5760 traces
+FULL AUDIT PASS
+{
+  "audit": {
+    "traces": 5760,
+    "samples": 1733760,
+    "assessments": 46080,
+    "status": "PASS"
+  },
+  "methods": [
+    {
+      "auth": false,
+      "window": 3,
+      "n": 5760,
+      "declared": 2976,
+      "unsafe": 2010,
+      "missing": 2784,
+      "censored": 0,
+      "later": 1896,
+      "future_eligible": 2976,
+      "median_wait_s": 0.4000000000000003
+    },
+    {
+      "auth": false,
+      "window": 5,
+      "n": 5760,
+      "declared": 2652,
+      "unsafe": 1602,
+      "missing": 3108,
+      "censored": 0,
+      "later": 1302,
+      "future_eligible": 2652,
+      "median_wait_s": 0.8000000000000007
+    },
+    {
+      "auth": false,
+      "window": 8,
+      "n": 5760,
+      "declared": 2400,
+      "unsafe": 1092,
+      "missing": 3360,
+      "censored": 0,
+      "later": 1092,
+      "future_eligible": 2400,
+      "median_wait_s": 1.4000000000000004
+    },
+    {
+      "auth": false,
+      "window": 12,
+      "n": 5760,
+      "declared": 2352,
+      "unsafe": 1080,
+      "missing": 3408,
+      "censored": 0,
+      "later": 1080,
+      "future_eligible": 2352,
+      "median_wait_s": 2.200000000000001
+    },
+    {
+      "auth": true,
+      "window": 3,
+      "n": 5760,
+      "declared": 1872,
+      "unsafe": 440,
+      "missing": 3888,
+      "censored": 0,
+      "later": 480,
+      "future_eligible": 1872,
+      "median_wait_s": 1.1999999999999993
+    },
+    {
+      "auth": true,
+      "window": 5,
+      "n": 5760,
+      "declared": 1826,
+      "unsafe": 342,
+      "missing": 3934,
+      "censored": 0,
+      "later": 306,
+      "future_eligible": 1826,
+      "median_wait_s": 1.8000000000000007
+    },
+    {
+      "auth": true,
+      "window": 8,
+      "n": 5760,
+      "declared": 1768,
+      "unsafe": 198,
+      "missing": 3992,
+      "censored": 0,
+      "later": 206,
+      "future_eligible": 1768,
+      "median_wait_s": 3.4000000000000004
+    },
+    {
+      "auth": true,
+      "window": 12,
+      "n": 5760,
+      "declared": 1656,
+      "unsafe": 132,
+      "missing": 4104,
+      "censored": 0,
+      "later": 132,
+      "future_eligible": 1656,
+      "median_wait_s": 6.500000000000002
+    }
+  ],
+  "paired": {
+    "unsafe": {
+      "n": 1768,
+      "improve": 604,
+      "worsen": 0,
+      "difference_pp": 34.16289592760181,
+      "conditional95": [
+        33.258426966292134,
+        35.07972665148064
+      ]
+    },
+    "later": {
+      "n": 1768,
+      "improve": 576,
+      "worsen": 4,
+      "difference_pp": 32.35294117647059,
+      "conditional95": [
+        27.752808988764045,
+        36.87782805429864
+      ]
+    }
+  },
+  "paired_wait": {
+    "n": 1768,
+    "median_s": 1.5,
+    "left_only": 1208,
+    "right_only": 0,
+    "both_missing": 2784
+  },
+  "exploratory_decomposition": [
+    {
+      "auth": false,
+      "window": 3,
+      "physical": 0,
+      "authority": 2010,
+      "service": 612,
+      "physical_only": 0
+    },
+    {
+      "auth": false,
+      "window": 8,
+      "physical": 0,
+      "authority": 1092,
+      "service": 324,
+      "physical_only": 0
+    },
+    {
+      "auth": true,
+      "window": 3,
+      "physical": 20,
+      "authority": 420,
+      "service": 0,
+      "physical_only": 20
+    },
+    {
+      "auth": true,
+      "window": 8,
+      "physical": 26,
+      "authority": 196,
+      "service": 0,
+      "physical_only": 2
+    }
+  ]
+}
+RUN independent_v8/experiment/check_trajectories.py
+{"method": "independently coded forward Euler at 1 ms versus campaign RK4 at 10 ms", "trajectories": 320, "max_level_error": 0.004513662305832611, "tolerance_level_units": 0.1, "status": "PASS", "scope": "supplemental numerical audit, not physical calibration"}
+RUN independent_v8/experiment/check_measurement_cases.py
+PASS: 20 noisy G3+A cases and 2 noise-free, fresh-but-lagged G8+A cases.
+RUN independent_v8/experiment/make_outputs.py
+Outputs generated
+RUN scripts/reproduce_paper_tables.py --out /tmp/syscon-reproduce-rlklh_fl/artifact/reproduced_paper
+Exported numerical Tables IV–VIII and all three analytical figures.
+{"status": "PASS", "elapsed_seconds": 59.44, "original_samples": 27300, "heldout_samples": 19200, "nonlinear_samples": 1733760, "assessments": 50040, "new_http_campaign_collected": false, "nonlinear_process_trajectories_numerically_checked": 320}

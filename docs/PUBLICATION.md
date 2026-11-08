@@ -1,25 +1,33 @@
-# Publication handoff
+# Publication and version history
 
-Status: release candidate, unpublished. No repository or Zenodo DOI has been created.
+Public repository: https://github.com/rameshbks/syscon2027-recovery-declarations
 
-1. Review the candidate files and proposed MIT license. Confirm all named contributors agree to public release and licensing. Rename LICENSE.proposed to LICENSE only after that decision. Add license: MIT to CITATION.cff at that point.
-2. Create the public repository syscon2027-recovery-declarations under the chosen owner. Upload this tree, excluding local environments and verification scratch copies. Keep all frozen data/source bytes intact.
-3. Connect that repository to Zenodo before creating its first GitHub release. Zenodo's GitHub integration requires a public repository.
-4. Create the reviewed v1.0.0 release. Verify that Zenodo actually creates a public record and a version-specific DOI; a reserved draft DOI alone is not a public archive.
-5. Add the real GitHub URL and version DOI to citation metadata and the manuscript. Cite the fixed version DOI for reproducibility. Do not invent identifiers.
-6. Retain the checksums for the exact release. If files are changed after archiving, create a new version and cite that version's DOI.
+The contributors approved public release under the MIT License. LICENSE contains the approved license text. The review manuscript includes author names and the user confirmed that double-blind review does not apply.
 
-The current official SysCon initial author page does not state a double-blind requirement. This is not proof that a special session has no additional rule; verify the EDAS track instructions before placing identifying repository links in a review manuscript. The same page lists conflicting general and academic deadline information, so use the specific EDAS track deadline rather than inferring an extension.
+## v1.0.0 and v1.0.1
 
-The manuscript itself is excluded from this code/data release. It still says the artifact has not been publicly archived, which remains accurate. Replace that statement only after the public archive and its contents are verified.
+The earlier releases were published on GitHub. The user supplied the published v1.0.1 source archive for this repair. The earlier Zenodo archive is:
+https://doi.org/10.5281/zenodo.24061066
 
-Suggested final wording after publication:
-"The source code, recorded traces, outcome data, and reproduction and verification scripts are publicly archived in version 1.0.0 of the research artifact [17]."
+Do not replace that archival record or retarget the historical tags.
 
-Reference [17] must contain the actual authors, artifact title, Zenodo, publication year, version and verified DOI. No placeholder DOI is included in this preparation.
+Fresh-download inspection confirmed that four CSV files had LF line endings instead of the retained CRLF bytes. Their cell values were unchanged, but byte-level checks failed. LICENSE.proposed had also been renamed to LICENSE without updating the checksum manifest. Citation metadata still identified 1.0.0 and preparation-era README text had not been updated.
 
-Authoritative workflow references:
-- https://help.zenodo.org/docs/github/archive-software/github-upload/
-- https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
-- https://zenodo.org/help/versioning
-- https://ieeesyscon.org/2027/authors/initial-author-instructions
+## Corrected v1.0.2
+
+This version restores all four CSV files to their original recorded SHA-256 hashes. It preserves the license bytes, updates the checksum filename and publication metadata, and adds .gitattributes so Git does not change tracked bytes. All checksums are regenerated for the corrected release, including intentionally edited documentation. Scientific sources, raw sample values, schedules, predicates and outcome rules are unchanged.
+
+The final table-export verifier compares parsed CSV records rather than platform-specific output line endings. It does not relax byte-level integrity checks on delivered data.
+
+The v1.0.2 version DOI has not yet been issued. CITATION.cff therefore does not attach the older version DOI to the corrected release.
+
+## Publish this fix
+
+1. Copy the corrected tree into the existing local clone; preserve its .git directory. Include .gitattributes, README.md, CITATION.cff, LICENSE and CHECKSUMS.json.
+2. In GitHub Desktop, review and commit the corrected files, then Push origin.
+3. Verify a fresh clone or GitHub source archive. Run python scripts/check_integrity.py and python scripts/verify_release.py.
+4. Only after those checks pass, publish tag v1.0.2 from the corrected commit. Zenodo integration is already enabled.
+5. Open the resulting Zenodo record and verify version, authors, MIT license, linked tag, archive files and new version DOI.
+6. Use that new version DOI in the manuscript. Keep the older DOI identified as v1.0.1.
+
+To keep citation metadata synchronized without making another code release, Zenodo record metadata can be edited after the version DOI exists. A DOI added to the GitHub default branch afterward does not change the archived tag. Do not claim the old DOI is the new version DOI.

@@ -1,21 +1,26 @@
 cff-version: 1.2.0
-message: "Please cite the archived version of this research artifact once its version DOI is available."
+message: Cite the version-specific Zenodo archive for the exact release used. The v1.0.2 DOI is pending
+  archival; the v1.0.1 DOI does not identify this version.
 type: software
-title: "SysCon 2027 Recovery Declarations: Code and Recorded Traces"
-version: 1.0.0
+title: 'SysCon 2027 Recovery Declarations: Code and Recorded Traces'
+version: 1.0.2
 authors:
-  - family-names: Subramani
-    given-names: Ramesh
-    affiliation: New York University
-  - family-names: Mahamed
-    given-names: Abdul Khadir
-    affiliation: New York University
-  - family-names: Mandapaka
-    given-names: Sai Pavan Kumar
-    affiliation: New York University
-abstract: "Reproduction artifact for recovery-declaration comparisons on original and held-out HTTP traces and a separately implemented nonlinear two-tank process."
+- family-names: Subramani
+  given-names: Ramesh
+  affiliation: New York University
+- family-names: Mahamed
+  given-names: Abdul Khadir
+  affiliation: New York University
+- family-names: Mandapaka
+  given-names: Sai Pavan Kumar
+  affiliation: New York University
+abstract: Reproduction artifact for recovery-declaration comparisons on original and held-out HTTP traces
+  and a separately implemented nonlinear two-tank process.
 keywords:
-  - cyber resilience
-  - operational technology
-  - recovery assessment
-  - evidence integrity
+- cyber resilience
+- operational technology
+- recovery assessment
+- evidence integrity
+url: https://github.com/rameshbks/syscon2027-recovery-declarations
+license: MIT
+repository-code: https://github.com/rameshbks/syscon2027-recovery-declarations

@@ -19,5 +19,11 @@
       "assessments": 46080
     }
   ],
-  "publication_status": "unpublished preparation; no DOI assigned"
+  "publication_status": "Public repository exists; v1.0.1 archived; corrected v1.0.2 prepared, new version DOI pending",
+  "repository": "https://github.com/rameshbks/syscon2027-recovery-declarations",
+  "earlier_version_archive": {
+    "version": "1.0.1",
+    "doi": "10.5281/zenodo.24061066"
+  },
+  "artifact_version": "1.0.2"
 }

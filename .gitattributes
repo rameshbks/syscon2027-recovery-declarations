@@ -1,0 +1,3 @@
+# Preserve exact bytes used by CHECKSUMS.json and frozen source hashes.
+* -text
+*.csv -text

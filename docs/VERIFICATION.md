@@ -18,4 +18,4 @@ Results:
 
 The first assembly omitted the pilot fixture required by two corruption tests. It was added without changing the test code or frozen scientific sources; the final complete test run passes. The pilot is a fixture, not a new main experiment.
 
-No full HTTP campaign was recollected and no historical result was overwritten. The nonlinear generator was not rerun during packaging; its retained outputs were fully reconstructed and numerically checked. Source hashes for all frozen campaign dependencies and the original ZIP match the retained manifests. No public repository, release, or DOI was created.
+No full HTTP campaign was recollected and no historical result was overwritten. The nonlinear generator was not rerun during packaging; its retained outputs were fully reconstructed and numerically checked. Source hashes for all frozen campaign dependencies and the original ZIP match the retained manifests. No public repository, release, or DOI was created during that initial preparation. For current publication status and the v1.0.2 integrity repair, see PUBLICATION.md and REPAIR_V1.0.2.md.
